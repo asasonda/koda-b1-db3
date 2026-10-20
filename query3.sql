@@ -18,9 +18,9 @@ limit 1
 
 
 -- 4
-select movies.year as tahun, count(*) as banyak_movie from movies
+select movies.year as tahun, count(movies.name) as banyak_movie from movies
 GROUP BY movies.YEAR
-ORDER BY COUNT(*) DESC
+ORDER BY COUNT(movies.name) desc
 LIMIT 1
 
 -- 5
