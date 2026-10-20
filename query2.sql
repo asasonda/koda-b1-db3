@@ -1,0 +1,11 @@
+-- select current_database()
+-- 1
+select ms.name, ms.year, ms.rating, md.director_id, mg.genre from movies ms
+join movies_directors md on md.movie_id = ms.id
+join movies_genres mg on mg.movie_id = ms.id
+limit 50
+
+-- 2
+select a.first_name as nama, r.role, m.name as movie  from actors a
+join roles r on a.id = r.actor_id
+join movies m on m.id = r.movie_id
